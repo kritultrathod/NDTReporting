@@ -1,0 +1,1343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Name>NDTReportsVS</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.0</ProjectVersion>
+    <ProjectGuid>{67cbc824-a49e-4e9b-a947-360f3dfe65c3}</ProjectGuid>
+    <DSP>Microsoft.Data.Schema.Sql.Sql100DatabaseSchemaProvider</DSP>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <ShowWizard>True</ShowWizard>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <IncludeSchemaNameInFileName>False</IncludeSchemaNameInFileName>
+    <ModelCollation>1033,CI</ModelCollation>
+    <DefaultFileStructure>BySchema</DefaultFileStructure>
+    <DeployToDatabaseAddToServerExplorer>True</DeployToDatabaseAddToServerExplorer>
+    <DeployToScript>True</DeployToScript>
+    <CatalogPropertiesFile>Properties\Database.sqlsettings</CatalogPropertiesFile>
+    <ServerPropertiesFile>
+    </ServerPropertiesFile>
+    <LoadSqlClrTypes>True</LoadSqlClrTypes>
+    <RootNamespace>NDTReportsVS</RootNamespace>
+    <DefaultSchema>dbo</DefaultSchema>
+    <PreviousProjectVersion>4.0</PreviousProjectVersion>
+    <AllowServerObjects>False</AllowServerObjects>
+    <AllowDatabaseObjects>True</AllowDatabaseObjects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <OutputPath>.\sql\release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>Data Source=KRITZ\SQL2008;Integrated Security=True;Pooling=False</TargetConnectionString>
+    <TargetDatabase>artha</TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <OutputPath>.\sql\debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TargetConnectionString>Data Source=KRITZ\SQL2008;Integrated Security=True;Pooling=False</TargetConnectionString>
+    <TargetDatabase>artha</TargetDatabase>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <SuppressWarnings>
+    </SuppressWarnings>
+    <DeploymentConfigFile>Properties\Database.sqldeployment</DeploymentConfigFile>
+    <SqlCommandVariablesFile>Properties\Database.sqlcmdvars</SqlCommandVariablesFile>
+    <DeployToDatabase>False</DeployToDatabase>
+  </PropertyGroup>
+  <!--Import the settings-->
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v10.0\TeamData\Microsoft.Data.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Scripts" />
+    <Folder Include="Scripts\Pre-Deployment" />
+    <Folder Include="Scripts\Post-Deployment" />
+    <Folder Include="Data Generation Plans" />
+    <Folder Include="Schema Comparisons" />
+    <Folder Include="Properties\" />
+    <Folder Include="Schema Objects\" />
+    <Folder Include="Schema Objects\Schemas\" />
+    <Folder Include="Schema Objects\Schemas\dbo\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Service Broker\Queues\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\dbo\Views\Statistics\" />
+    <Folder Include="Schema Objects\Database Level Objects\" />
+    <Folder Include="Schema Objects\Database Level Objects\Assemblies\" />
+    <Folder Include="Schema Objects\Database Level Objects\Database Triggers\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Schemas\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Users\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Certificates\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Asymmetric Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Master Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Signatures\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Symmetric Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Encryption Keys\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Database Audit Specification\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Application Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Security\Roles\Database Roles\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Broker Priorities\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Contracts\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Event Notifications\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Message Types\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Remote Service Binding\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Routes\" />
+    <Folder Include="Schema Objects\Database Level Objects\Service Broker\Services\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Stoplists\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Filegroups\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Files\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Full Text Catalogs\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Functions\" />
+    <Folder Include="Schema Objects\Database Level Objects\Storage\Partition Schemes\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Tables\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Views\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\NDTUAT\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Tables\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Views\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\MiEFW\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Tables\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Views\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\teamarth_EFW\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Tables\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Views\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\NDTProd\Views\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Defaults\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Functions\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Rules\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Stored Procedures\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Types\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Types\User Defined Data Types\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Types\User Defined Types CLR\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Types\User Defined Table Types\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Programmability\Types\XML Schema Collections\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Synonyms\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Tables\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Tables\Constraints\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Tables\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Tables\Keys\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Tables\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Tables\Statistics\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Views\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Views\Indexes\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Views\Triggers\" />
+    <Folder Include="Schema Objects\Schemas\BAKUP\Views\Statistics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PropertiesFile Include="Properties\Database.sqlsettings">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqldeployment">
+    </PropertiesFile>
+    <PropertiesFile Include="Properties\Database.sqlcmdvars">
+    </PropertiesFile>
+    <Build Include="Properties\Database.sqlpermissions">
+      <ModelBuilderType>Permissions</ModelBuilderType>
+    </Build>
+    <PreDeploy Include="Scripts\Pre-Deployment\Script.PreDeployment.sql">
+      <SubType>Code</SubType>
+    </PreDeploy>
+    <PostDeploy Include="Scripts\Post-Deployment\Script.PostDeployment.sql">
+      <SubType>Code</SubType>
+    </PostDeploy>
+  </ItemGroup>
+  <ItemGroup>
+    <BuildContributorArgument Include="OutDir=$(OutDir)" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Constraints\DF__LookUpMas__Delet__573DED66.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Constraints\DF_Stock_DeletedStatus.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Constraints\DF_Portfolio_DeletedStatus.defconst.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Storage\Files\artha_log.sqlfile.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Storage\Files\artha.sqlfile.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstClientAppMap_mst_Clientbase.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstClientAppMap_mst_Appbase.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_MiDBTool_ParameterMaster_MiDBTool_ReportMaster.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_MiDBTool_ReportMaster_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\FK_RadiographicWeldTestResult_RadiographicWeld.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_MstDevComponents_Attributes_MstDevComponents.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_sysconfigtbl_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstuserinfo_ContactInfo.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstuserauthentication_mstuserinfo.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstroleinfo_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstFunctionalityinfo_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstrolefunctionalityinfo_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstrolefunctionalityinfo_mstroleinfo.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstrolefunctionalityinfo_mstFunctionalityinfo.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_Table1_mstuserinfo.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_Table1_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_ComponentTxn_MstDevComponents.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_ComponentTxn_MstDevComponents_Attributes.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_SPManager_ParameterMaster_SPManager_ProcMaster.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_mstLayout_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_LayoutTxn_mstLayout.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_LayoutTxn_ComponentTxn.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_MstDevComponentEvent_MstDevComponents.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_SPManager_ProcMaster_SPManager_ProcMaster_clientID.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\FK_miefw_mst_ResourceMetadata_mstClientAppMap.fkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Indexes\IX_NdtDBExceptionLog_ErrorDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Indexes\IX_NdtExceptionLog_CreatedDate.index.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_mstClientAppMap.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_MiDBTool_ParameterMaster.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_RadiographicWeld.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_MiDBTool_ReportMaster.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_UltrasonicExaminationTestResults.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_ContactInfo.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_RadiographicWeldTestResult.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_MstDevComponents_Attributes.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_sysconfigtbl_1.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_mstuserinfo.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_UltrasonicExaminationTest.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_mstroleinfo.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_mstFunctionalityinfo.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_LookUpSU.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_Table1.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_CustomReportTemplateDetails.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_Table_1.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_mst_Clientbase.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_mst_Appbase.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_Table_1_1.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_Table_1_2.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_ReportTemplates.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_SPManager_ProcMaster.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_TechniqueSheetsDetail.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\users_userid_PK.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_LiquidPenetrantExaminationTest.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_MessageResources.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_MagneticParticleExaminationTest.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_miefw_mst_ResourceMetadata.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_MagneticParticleExaminationTestResults.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_ConsumablesRate.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\PK_Stock.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Keys\PK_Portfolio.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_NdtExceptionLog.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Keys\PK_MstDevComponents_1.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\PK_LiquidPenetrantExaminationTestResults.pkey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllMagneticParticleTestReport_KTR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteUltrasonicTestResultsByReportId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteUltrasonicTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLiquidPenetrantReportSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\getEmailbyID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLiquidPenetrantReportALLSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetReportTemplateByClientIDAndReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummaryRunningInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummaryRunningInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_getBaseReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummaryRunningInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummaryRunningInch_TotalQuantumOfJobInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\getIds.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\Verify.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummaryRunningInch_TotalQuantumOfJobInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\validate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummarySquareInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummarySquareInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\UsersDetail.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummarySquareInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_getReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummarySquareInch_TotalQuantumOfJobSquareInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_LiquidPenetrantBillSummarySquareInch_TotalQuantumOfJobSquareInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\GetRegistrationDate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\GetCompanyName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateRadiographicWeld.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertRadiographicWeld.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\capitalize.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_getReportTemplateById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_getclientId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetUltrasonicReportSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_InsertNdtDBExecutionLog.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertMagneticParticleTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetUltrasonicReportALLSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertMagneticParticleTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummaryRunningInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummaryRunningInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummaryRunningInch_TotalQuantumOfJobInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRadiographicReportAllSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummaryRunningInch_TotalQuantumOfJobInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummarySquareInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummarySquareInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummarySquareInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummarySquareInch_TotalQuantumOfJobSquareInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummarySquareInch_TotalQuantumOfJobSquareInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertLiquidPenetrantTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_UltrasonicBillSummaryRunningInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_InsertNdtAppExecutionLog.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertLiquidPenetrantTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllMagneticParticleTestReport.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateCustomTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRemarks.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetObservations.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRefDocuments.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRadiationSource.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetTechnique.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateRadiographicWeldTestResult.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRadiographicWeldReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRadiographicWeldReportTestResultsById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_GetAppExceptions.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteRadiographicWeldTestResultByReportId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteRadiographicWeldTestResultByTestId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLookUpValues.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertRadiographicWeldTestResult.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteRadiographicWeldReport.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLookUpGridResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_GetErrorInfo.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetMagneticParticleTestReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetMagneticParticleTestResultsReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateMagneticParticleTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_CreateProcTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateMagneticParticleTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteMagneticParticleTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteMagneticParticleTestResultsByReportId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_describe.proc.sql">
+      <SubType>Code</SubType>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteMagneticParticleTestResultsByTestId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu__private_addError.proc.sql">
+      <SubType>Code</SubType>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateCustomReportTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu__private_addFailure.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertCustomReportTemplate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu__private_createTestResult.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_CreateNewClientID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu__private_showTestResult.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_error.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_failure.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateLiquidPenetrantTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_runTestSuite.proc.sql">
+      <SubType>Code</SubType>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_showTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertCustomReportTemplateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_runTests.proc.sql">
+      <SubType>Code</SubType>
+      <QuotedIdentifier>Off</QuotedIdentifier>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\GetUserName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateLiquidPenetrantTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetFilmMakeAndTypes.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLiquidPenetrantTestResultsReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetSubtest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLiquidPenetrantTestReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllLiquidPenetrantTestReport.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteLiquidPenetrantTestResultsByTestId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetSortFields.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteLiquidPenetrantTestResultsByReportId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllLiquidPenetrantTestReport_KTR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteLiquidPenetrantTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\teamarth_EFW\Programmability\Stored Procedures\Demo_ClsDataManager.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientbase_AddClient.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientbase_ModifyClient.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientbase_DeleteClient.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientbase_SelectClient.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateCustomReportTemplateRecord.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstAppbase_SelectApp.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateCustomReportTemplateDetails.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstAppbase_ModifyApp.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstAppbase_DeleteApp.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstAppbase_AddApp.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummaryRunningInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientAppMap_AddMapping.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummaryRunningInch_TotalQuantumOfJobInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\getSPParametersFromStoreID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientAppMap_ModifyMapping.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\getSPParameters_bySPName.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientAppMap_DeleteMapping.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummaryRunningInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\mstClientAppMap_SelectMapping.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummarySquareInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\GetTechniqueSheetsDetailByTechniqueId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummarySquareInch_TotalQuantumOfJobSquareInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummarySquareInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummarySquareInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummaryRunningInch_TotalQuantumOfJobInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummarySquareInch_TotalQuantumOfJobSquareInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\SPMAnager_getSPParametersTable.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_RadiographicBillSummaryRunningInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\SPManager_getSPNameFromStoreID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetMPTestReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllUltrasonicTestReport_KTR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\Update_SPManager_ProcMaster.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetRadiographicReportSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllRadiographicWeldReports_KTR.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\Add_SPManager_ProcMaster.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\Delete_SPManager_ProcMaster.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetLPTestReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\getAllSPName_BySchema.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\Select_SPManager_ProcMaster.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\AddLookupData.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usercheck.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetMagneticParticleReportSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_GetTables.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummaryRunningInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_GetProcs.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummaryRunningInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummaryRunningInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummaryRunningInch_TotalQuantumOfJobInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\secu_updateLoginPwd.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummaryRunningInch_TotalQuantumOfJobInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\secu_authenticateuser.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummarySquareInch_PerDayUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\getConfig_ByValue.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\usp_GetErrorInfo.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummarySquareInch_PerUnitRate.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\getConfig_ByType.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateUltrasonicTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummarySquareInch_Total.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Stored Procedures\getConfig_ByCategory.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\USP_Portfolio_Insert.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_UpdateUltrasonicTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummarySquareInch_TotalQuantumOfJobSquareInch.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertUltrasonicTestResults.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Stored Procedures\ut_MagneticParticleBillSummarySquareInch_TotalQuantumOfJobSquareInch_Only.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_InsertUltrasonicTest.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\tsu_Assert.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\usp_frmwrk_Paging.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetUTTestReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetUltrasonicTestResultsReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetMagneticParticleReportAllSummaryBillingByReportID.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllRadiographicWeldReports_WIP.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetUltrasonicTestReportById.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetConsumablesTypes.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllRadiographicWeldReports.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllUltrasonicTestReport.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_GetAllMagneticParticleTestReport_bak.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\prc_DeleteUltrasonicTestResultsByTestId.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Programmability\Stored Procedures\ResetPassword.proc.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\NDTReportsVS.rolememberships.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Functions\getMessageByID.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Functions\getStoreIdForReport.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Functions\getNextMessageId.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Functions\ToProperCase.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Functions\properCase.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Programmability\Functions\getWeekdays.function.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Keys\users_emailid_UK.ukey.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_sa.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_Vikram.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_Piyush.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_kalpesh.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_Ritesh.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_NDT.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_EFW.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_Kritul.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_Hitesh.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_cable.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_MiVA.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Users\teamarth_NDTProd.user.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTProd\Programmability\Types\User Defined Data Types\ActiveStatus.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTProd\Programmability\Types\User Defined Data Types\LoginID.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Types\User Defined Data Types\ActiveStatus.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Programmability\Types\User Defined Data Types\LoginID.uddt.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstClientAppMap.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\CompanyDetails.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\ReportTemplates_KTR.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\MiDBTool_ParameterMaster.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\RadiographicWeld.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\MiDBTool_ReportMaster.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\UltrasonicExaminationTestResults.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\ContactInfo.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\RadiographicWeldTestResult.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\MenuItems.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\MstDevComponents_Attributes.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Observationsxx.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Remarksxx.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Techniquesxx.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\sysconfigtbl.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\sysconfigtbl_history.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\RadiationSource.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstuserinfo.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\JobDescriptionRates.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\UltrasonicExaminationTest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstuserauthentication.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstuserauthentication_history.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstroleinfo.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\LookUpMasterTest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\tsuActiveTest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstFunctionalityinfo.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\tsuErrors.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\LookUpMaster.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\tsuFailures.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\tsuLastTestResult.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstrolefunctionalityinfo.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\tsuTestResults.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\BAKUP\Tables\Archive_NdtDBExceptionLog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\BAKUP\Tables\Archive_NdtExceptionLog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\User2Role2AppMap.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\CustomReportTemplateDetails.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\ComponentTxn.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\PerDayRates.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\Archive_mst_Clientbase.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mst_Appbase.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\SPManager_ParameterMaster.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mstLayout.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\FilmTypeRates.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\LayoutTxn.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\MstDevComponentEvent.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\ReportTemplates.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\CustomReportTemplate.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\SPManager_ProcMaster.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\TechniqueSheetDetails.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\WeldType.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Users.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\LiquidPenetrantExaminationTest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\MessageResources.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\UserMenu.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\MagneticParticleExaminationTest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Test.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\mst_ResourceMetadata.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\MagneticParticleExaminationTestResults.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\SubTest.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\ConsumablesRate.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\NdtDBExceptionLog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Stock.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\Portfolio.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\NdtExceptionLog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\dbo\Tables\DBExceptionLog.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\RefDocuments.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\Registration.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\MiEFW\Tables\MstDevComponents.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Schemas\NDTUAT\Tables\LiquidPenetrantExaminationTestResults.table.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Service Broker\Routes\AutoCreatedLocal.route.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\BAKUP.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\cable.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\MiEFW.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\NDT.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\NDT_POC.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\NDTProd.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\NDTUAT.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_cable.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_EFW.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_Hitesh.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_kalpesh.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_Kritul.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_MiVA.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_NDT.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_NDTProd.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_Piyush.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_Ritesh.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_sa.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+    <Build Include="Schema Objects\Database Level Objects\Security\Schemas\teamarth_Vikram.schema.sql">
+      <SubType>Code</SubType>
+    </Build>
+  </ItemGroup>
+</Project>

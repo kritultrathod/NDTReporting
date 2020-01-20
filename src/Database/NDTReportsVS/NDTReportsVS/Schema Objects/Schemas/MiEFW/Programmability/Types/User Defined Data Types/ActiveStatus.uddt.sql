@@ -1,0 +1,3 @@
+﻿CREATE TYPE [MiEFW].[ActiveStatus]
+    FROM NCHAR (10) NOT NULL;
+

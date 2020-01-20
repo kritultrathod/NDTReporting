@@ -1,0 +1,8 @@
+﻿CREATE TABLE [NDTUAT].[CompanyDetails] (
+    [ClientId]    INT            IDENTITY (1, 1) NOT NULL,
+    [CompanyName] NVARCHAR (50)  NOT NULL,
+    [Logo]        VARCHAR (200)  NOT NULL,
+    [Address]     NVARCHAR (200) NOT NULL,
+    PRIMARY KEY CLUSTERED ([ClientId] ASC) WITH (ALLOW_PAGE_LOCKS = ON, ALLOW_ROW_LOCKS = ON, PAD_INDEX = OFF, IGNORE_DUP_KEY = OFF, STATISTICS_NORECOMPUTE = OFF)
+);
+

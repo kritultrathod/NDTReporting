@@ -1,0 +1,3 @@
+﻿ALTER TABLE [MiEFW].[LayoutTxn]
+    ADD CONSTRAINT [FK_LayoutTxn_mstLayout] FOREIGN KEY ([LayoutID]) REFERENCES [MiEFW].[mstLayout] ([AutoID]) ON DELETE NO ACTION ON UPDATE NO ACTION;
+

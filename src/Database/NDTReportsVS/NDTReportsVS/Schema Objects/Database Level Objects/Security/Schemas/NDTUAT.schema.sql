@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [NDTUAT]
+    AUTHORIZATION [teamarth_Vikram];
+

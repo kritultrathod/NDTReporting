@@ -1,0 +1,20 @@
+﻿
+CREATE PROCEDURE [NDTUAT].[prc_GetRemarks]
+@ClientId int
+AS
+BEGIN -- BEGIN PROC
+	--<VALIDATE INPUT PARAMS> IF INVALID RETURN <CUSTOM_ERROR_CODE>
+	--<CHECK EXISTANCE IN DB>
+	BEGIN TRY
+		SELECT ReMarksId, RemarksShortName 
+		FROM NDTUAT.Remarks
+		WHERE DeletedStatus=0
+		AND ClientId=@ClientId
+	END TRY
+	BEGIN CATCH
+		--LOG ERROR IN DB
+		EXEC [NDTUAT].[usp_GetErrorInfo]  
+		RETURN		
+	END CATCH
+END -- END PROC
+

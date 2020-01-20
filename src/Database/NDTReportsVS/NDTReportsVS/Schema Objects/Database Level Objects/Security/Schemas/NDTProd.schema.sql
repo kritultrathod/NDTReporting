@@ -1,0 +1,3 @@
+﻿CREATE SCHEMA [NDTProd]
+    AUTHORIZATION [teamarth_NDTProd];
+

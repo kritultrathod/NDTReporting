@@ -1,0 +1,3 @@
+﻿CREATE TYPE [NDTProd].[LoginID]
+    FROM NVARCHAR (50) NOT NULL;
+

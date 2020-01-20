@@ -1,0 +1,3 @@
+﻿CREATE TYPE [MiEFW].[LoginID]
+    FROM NVARCHAR (50) NOT NULL;
+
