@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="4" passed="4">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="90640" started-at="2013-03-10T10:04:07Z" finished-at="2013-03-10T10:05:37Z">
+    <groups>
+    </groups>
+    <test name="signup" duration-ms="90640" started-at="2013-03-10T10:04:07Z" finished-at="2013-03-10T10:05:37Z">
+      <class name="testCaseForNdt.TC_signup">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCaseForNdt.TC_signup@7f629e71]" name="setUp" is-config="true" duration-ms="95" started-at="2013-03-10T15:34:06Z" finished-at="2013-03-10T15:34:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="setupone()[pri:0, instance:testCaseForNdt.TC_signup@7f629e71]" name="setupone" is-config="true" duration-ms="3723" started-at="2013-03-10T15:34:07Z" finished-at="2013-03-10T15:34:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupone -->
+        <test-method status="PASS" signature="ValidateSignUpForm()[pri:0, instance:testCaseForNdt.TC_signup@7f629e71]" name="ValidateSignUpForm" duration-ms="2858" started-at="2013-03-10T15:34:10Z" finished-at="2013-03-10T15:34:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- ValidateSignUpForm -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCaseForNdt.TC_signup@7f629e71]" name="tearDown" is-config="true" duration-ms="254" started-at="2013-03-10T15:35:37Z" finished-at="2013-03-10T15:35:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCaseForNdt.TC_signup -->
+      <class name="testCaseForNdt.TC_radiographicweldreport">
+        <test-method status="PASS" signature="setUpone()[pri:0, instance:testCaseForNdt.TC_radiographicweldreport@44775121]" name="setUpone" is-config="true" duration-ms="4529" started-at="2013-03-10T15:34:38Z" finished-at="2013-03-10T15:34:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpone -->
+        <test-method status="PASS" signature="test_radiographicweldreport()[pri:0, instance:testCaseForNdt.TC_radiographicweldreport@44775121]" name="test_radiographicweldreport" duration-ms="17590" started-at="2013-03-10T15:34:43Z" finished-at="2013-03-10T15:35:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_radiographicweldreport -->
+        <test-method status="PASS" signature="tearDownone()[pri:0, instance:testCaseForNdt.TC_radiographicweldreport@44775121]" name="tearDownone" is-config="true" duration-ms="162" started-at="2013-03-10T15:35:00Z" finished-at="2013-03-10T15:35:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownone -->
+      </class> <!-- testCaseForNdt.TC_radiographicweldreport -->
+      <class name="testCaseForNdt.TC_createtemplate">
+        <test-method status="PASS" signature="setUpone()[pri:0, instance:testCaseForNdt.TC_createtemplate@77fe4169]" name="setUpone" is-config="true" duration-ms="14723" started-at="2013-03-10T15:34:13Z" finished-at="2013-03-10T15:34:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpone -->
+        <test-method status="PASS" signature="test_radiographicweldreport()[pri:0, instance:testCaseForNdt.TC_createtemplate@77fe4169]" name="test_radiographicweldreport" duration-ms="9897" started-at="2013-03-10T15:34:28Z" finished-at="2013-03-10T15:34:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_radiographicweldreport -->
+        <test-method status="PASS" signature="tearDownone()[pri:0, instance:testCaseForNdt.TC_createtemplate@77fe4169]" name="tearDownone" is-config="true" duration-ms="166" started-at="2013-03-10T15:34:38Z" finished-at="2013-03-10T15:34:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownone -->
+      </class> <!-- testCaseForNdt.TC_createtemplate -->
+      <class name="testCaseForNdt.TC_edit_radiographicweldreport">
+        <test-method status="PASS" signature="setUpone()[pri:0, instance:testCaseForNdt.TC_edit_radiographicweldreport@5b0d95cd]" name="setUpone" is-config="true" duration-ms="4671" started-at="2013-03-10T15:35:00Z" finished-at="2013-03-10T15:35:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpone -->
+        <test-method status="PASS" signature="test_editradiographicweldreport()[pri:0, instance:testCaseForNdt.TC_edit_radiographicweldreport@5b0d95cd]" name="test_editradiographicweldreport" duration-ms="32126" started-at="2013-03-10T15:35:05Z" finished-at="2013-03-10T15:35:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_editradiographicweldreport -->
+        <test-method status="PASS" signature="tearDownone()[pri:0, instance:testCaseForNdt.TC_edit_radiographicweldreport@5b0d95cd]" name="tearDownone" is-config="true" duration-ms="171" started-at="2013-03-10T15:35:37Z" finished-at="2013-03-10T15:35:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownone -->
+      </class> <!-- testCaseForNdt.TC_edit_radiographicweldreport -->
+    </test> <!-- signup -->
+  </suite> <!-- Suite -->
+</testng-results>

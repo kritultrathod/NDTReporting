@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="no">
+  <test name="signup">
+    <classes>
+      <class name="testCaseForNdt.TC_signup"/>
+      <class name="testCaseForNdt.TC_createtemplate"/>
+      <class name="testCaseForNdt.TC_radiographicweldreport"/>
+      <class name="testCaseForNdt.TC_edit_radiographicweldreport"/>  
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

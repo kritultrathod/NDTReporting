@@ -1,0 +1,197 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="HomeMaster.Master.cs"
+    Inherits="NDTReporting.HomeMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head id="Head1" runat="server">
+    <title>POCNDTReport</title>
+    <link rel="stylesheet" type="text/css" href="Css/style-web.css" />
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script type="text/javascript" src="Scripts/jquery-1.4.1.min.js"></script>
+    <script type="text/javascript" src="Script/Common/jquery-ui-1.8.24.custom.min.js"></script>
+    <script type="text/javascript" src="Script/CommonFunction.js"></script>
+    <script type="text/javascript" src="Script/MasterPage.js"></script>
+    <script type="text/javascript" >
+        $(document).ready(function () {
+           // The below time mentioned in milliseconds 1000 ms = 1sec. It is set so that Mac error can be resolved by calling a dummy request to server
+            setInterval("ajax4min()", 240000);
+            setInterval("ajax8min()", 480000);
+            setInterval("ajax12min()", 720000);
+            //960000
+        });
+
+        function ajax4min() {
+            $.ajax({
+                type: "GET",
+                url: "HTTPWebHandlers/SearchReport.ashx?callbackmethod=getsessioncallback&method=getsession4&param=nothing",
+                data: "user=success",
+                success: function (msg) {
+                    
+                },
+                error: function (msg) {
+                    
+                }
+            });
+        }
+        function ajax8min() {
+            $.ajax({
+                type: "GET",
+                url: "HTTPWebHandlers/SearchReport.ashx?callbackmethod=getsessioncallback&method=getsession8&param=nothing",
+                data: "user=success",
+                success: function (msg) {
+
+                },
+                error: function (msg) {
+
+                }
+            });
+        }
+        function ajax12min() {
+            $.ajax({
+                type: "GET",
+                url: "HTTPWebHandlers/SearchReport.ashx?callbackmethod=getsessioncallback&method=getsession12&param=nothing",
+                data: "user=success",
+                success: function (msg) {
+
+                },
+                error: function (msg) {
+
+                }
+            });
+        }
+        function ajax16min() {
+            $.ajax({
+                type: "GET",
+                url: "HTTPWebHandlers/SearchReport.ashx?callbackmethod=getsessioncallback&method=getsession16&param=nothing",
+                data: "user=success",
+                success: function (msg) {
+
+                },
+                error: function (msg) {
+
+                }
+            });
+        }
+        function ajax15min() {
+            $.ajax({
+                type: "GET",
+                url: "HTTPWebHandlers/SearchReport.ashx?callbackmethod=getsessioncallback&method=getsession&param=nothing",
+                data: "user=success",
+                success: function (msg) {
+
+                },
+                error: function (msg) {
+
+                }
+            });
+        }
+
+        
+    </script>
+    <style type="text/css">
+        .dropdown
+        {
+            display: none;
+            position: absolute;
+            left: 5px;
+            background: #eee;
+            <%--color: black;--%>
+        }
+        .dropdown a
+        {
+            display: block;
+            color: black !important;
+            text-decoration: none;
+            padding: 5px 7px;
+        }
+        .dropdown a:hover
+        {
+            background: #ccc;
+        }
+    </style>
+    <div id="dvLoading">
+    </div>
+    <%--- ---%>
+    <script language="javascript" type="text/javascript">
+        //Load Session values into js variables
+        {
+            
+            UserName = '<%=Session["UserName"] %>';
+            var ClientId = '<%=Session["ClientId"] %>';
+            var ssnTestTypeId = '<%=Session["TestType"] %>';
+            var ssnCurrentPageId = '<%=Session["CurrentPageId"] %>'; // CurrentMenuItem
+            var ssnIsAdmin = '<%=Session["IsAdmin"]%>'; // CurrentMenuItem
+        }
+    </script>
+    <link href="CSS/menustyle.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        @media print
+        {
+            #feedlyMiniIcon
+            {
+                display: none;
+            }
+        }
+    </style>
+    <%--- ---%>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="AppsFonts body">
+    <form id="MasterPageForm1" runat="server">
+    <%--style="background-color: gray"--%>
+    <div id='ContainerCenterPage'>
+        <div id='CenterPage'>
+            <div class="MasterBanner">
+                <%-- New Menu From Here --%>
+                <%--<asp:HiddenField runat="server" ID="hfCurrTab" />--%>
+                <ul id="nav">
+                    <li id="96" class="MNU PAGE"><a href="#">Test Type</a>
+                        <ul>
+                            <li><a id="1" class="MNU TTYPE" href="#">Radiographic Weld</a></li>
+                            <li><a id="3" class="MNU TTYPE" href="#">Ultrasonic Test</a></li>
+                            <li><a id="5" class="MNU TTYPE" href="#">Magnetic Particle</a></li>
+                            <li><a id="7" class="MNU TTYPE" href="#">Liquid Penetrant</a></li>
+                        </ul>
+                    </li>
+                    <li id="91" class="MNU PAGE"><a href="#">Create Report</a></li>
+                    <li id="92" class="MNU PAGE"><a href="#">Edit Report</a></li>
+                    <li id="93" class="MNU PAGE"><a href="#">Print Report</a></li>
+                    <li id="94" class="MNU PAGE"><a href="#">Create Template</a></li>
+                    <li id="95" class="MNU PAGE"><a href="#">Edit Template</a></li>
+                    <li id="99" class="MNU PAGE MASTER"><a href="#">Master Pages</a></li>
+                </ul>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <div class="dvTestType">
+                                &nbsp;
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dvUserGreeting">
+                                &nbsp;
+                            </div>
+                        </td>
+                        <td class="Logout">
+                            <a href="#" class="Logout">Log Out</a>
+                        </td>
+                    </tr>
+                </table>
+                <%-- New Menu END Here --%>
+            </div>
+            <hr size="1" width="100%" align="center" color="#0078ff" />
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <%--<div id="loadingDiv" style="width: 43px; height: 43px; position: fixed; top: 50%;
+            left: 50%; z-index: 1000; opacity: 1.0; transition: all .5s ease-in-out; margin: 0px 0 0 0px;">
+            <img id="theImg" src="http://athleticsnyc.com/img/loading_spinners/loading_spinner.gif" /></div>--%>
+            </asp:ContentPlaceHolder>
+            <font color="white">
+                <%--<div id="AssemblyVersionInfo">
+            <%=AssemblyVersionInfo%></div>--%>
+            </font>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

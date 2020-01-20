@@ -1,0 +1,105 @@
+﻿a:hover, a:active, a:focus, input:focus
+{
+    outline: 0;
+}
+#sub-left
+{
+    float: left;
+    width: 10%;
+}
+#sub-right
+{
+    float: right;
+    width: 90%;
+}
+.clear-both
+{
+    clear: both;
+}
+.navTestTypeBtn
+{
+    /*width: 105px;*/
+    text-align: center;
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+    background: -moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    color: #666666; /*font-family: arial;*/
+    font-size: 9px;
+    font-weight: bold;
+    padding: 6px 0px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #ffffff;
+    list-style: none;
+}
+.lookup-code
+{
+    /*width: 105px;*/
+    text-align: center;
+    -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
+    box-shadow: inset 0px 1px 0px 0px #ffffff;
+    background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f9f9f9), color-stop(1, #e9e9e9) );
+    background: -moz-linear-gradient( center top, #f9f9f9 5%, #e9e9e9 100% );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f9f9f9', endColorstr='#e9e9e9');
+    background-color: #f9f9f9;
+    border: 1px solid #dcdcdc;
+    display: inline-block;
+    color: #666666; /*font-family: arial;*/
+    font-size: 9px;
+    font-weight: bold;
+    padding: 6px 0px;
+    text-decoration: none;
+    text-shadow: 1px 1px 0px #ffffff;
+    list-style: none;
+    margin: 3px 0px 0px 0px;
+}
+.selectedItem
+{
+    /*border-color: #444444; /*#CCCCCC black*/
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+    border-bottom-color: #0078ff;
+    border-bottom-style: solid;
+    border-bottom-width: 2px;
+}
+.ltextbox
+{
+    color: #777;
+    width: 150px;
+    height: 20px; /* For rest of browser*/
+    border: 1px solid #c7d0d2;
+    font-size: 11px;
+}
+.lookUpLabel
+{
+    margin: 0;
+    padding: 0;
+    font-size: 11px;
+    text-align: right;
+    color: #666;
+    border-collapse: collapse;
+    float: left;
+    display: inline; /*overflow: auto;*/
+    padding: 5px 5px 5px 5px;
+    font-weight: bold;
+    text-align: right;
+    height: 32px;
+    width: 100%;
+}
+.navBanner
+{
+    margin: 0;
+    padding: 7px 6px 0;
+    background: #7d7d7d url(/Images/gradient.png) repeat-x 0 -110px;
+    line-height: 100%; /*border-radius: 2em;     -webkit-border-radius: 2em;     -moz-border-radius: 2em;*/
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0, 0.4);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0, 0.4);
+    text-align: left;
+}

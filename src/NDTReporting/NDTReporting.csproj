@@ -1,0 +1,652 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4FF7EC16-7812-4BF8-83CA-A1515EF04B93}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NDTReporting</RootNamespace>
+    <AssemblyName>NDTReporting</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="A1_Crap\PDFSample.aspx" />
+    <Content Include="CSS\Admin.css" />
+    <Content Include="CSS\menustyle.css" />
+    <Content Include="A1_Crap\divtest.htm" />
+    <Content Include="A1_Crap\HTMLPage1.htm">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="A1_Crap\index.htm" />
+    <Content Include="A1_Crap\SQL Procs.txt" />
+    <Content Include="A1_Crap\Swapable.htm" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Home.aspx" />
+    <Content Include="CreateReport.aspx" />
+    <Content Include="A1_Crap\Trial1.htm" />
+    <Content Include="CSS\Styles.css" />
+    <Content Include="EditReport.aspx" />
+    <Content Include="EditTemplate.aspx" />
+    <Content Include="EditTemplateGenerator.aspx" />
+    <Content Include="GetRediographicWeldTemplateName.aspx" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\form_bg.jpg" />
+    <Content Include="Images\gradient.png" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\minus.png" />
+    <Content Include="Images\NDT_512Silver.jpg" />
+    <Content Include="Images\plus.png" />
+    <Content Include="Images\remove.jpg" />
+    <Content Include="Images\SampleCompanyLogo.PNG" />
+    <Content Include="Images\scaanray.jpg" />
+    <Content Include="Images\submit.gif" />
+    <Content Include="lib\libeay32.dll" />
+    <Content Include="lib\libgcc_s_dw2-1.dll" />
+    <Content Include="lib\ssleay32.dll" />
+    <Content Include="lib\wkhtmltopdf.exe" />
+    <Content Include="LiquidPenetrantTestReport.aspx" />
+    <Content Include="LiquidPenetrantTestReportList.aspx" />
+    <Content Include="LiquidPenetrantTestReportViewer.aspx" />
+    <Content Include="Module\Admin\SourceLookUpPage.aspx" />
+    <Content Include="Module\Admin\RefDocLookUpPage.aspx" />
+    <Content Include="Module\Admin\LookUpPage.aspx" />
+    <Content Include="MagneticParticleTestReport.aspx" />
+    <Content Include="MagneticParticleTestReportList.aspx" />
+    <Content Include="MagneticParticleTestReportViewer.aspx" />
+    <Content Include="MenuItems.aspx" />
+    <Content Include="PDF\CSS\menustyle.css" />
+    <Content Include="PDF\CSS\style-print.css" />
+    <Content Include="PDF\CSS\style-web.css" />
+    <Content Include="PDF\CSS\Styles.css" />
+    <Content Include="PDF\footerLiquid.html" />
+    <Content Include="PDF\footerMagnetic.html" />
+    <Content Include="PDF\footerRadiography.html" />
+    <Content Include="PDF\footerUltrasonic.html" />
+    <Content Include="PDF\headerLiquid.html" />
+    <Content Include="PDF\headerMagnetic.html" />
+    <Content Include="PDF\headerRadiography.html" />
+    <Content Include="PDF\headerUltrasonic.html" />
+    <Content Include="PDF\ReportScaanrayMetallurgicalServices.html" />
+    <Content Include="PresentationLayer\FeedbackForm.aspx" />
+    <Content Include="PresentationLayer\ForgotPasswordForm.aspx" />
+    <Content Include="PresentationLayer\LoginPage.aspx" />
+    <Content Include="PresentationLayer\Registration.aspx" />
+    <Content Include="PresentationLayer\ResetPasswordForm.aspx" />
+    <Content Include="PresentationLayer\WelcomeForm.aspx" />
+    <Content Include="RadiographicWeldReportView.aspx" />
+    <Content Include="RadiographicWeldReportViewer.aspx" />
+    <Content Include="ReportLayout.aspx" />
+    <Content Include="CSS\style-print.css" />
+    <Content Include="CSS\style-web.css" />
+    <Content Include="HomeMaster.Master" />
+    <Content Include="RadiographicWeldReport.aspx" />
+    <Content Include="Scripts\addrecord-script.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.inlinefieldlabel.min.js" />
+    <Content Include="Scripts\jquery.metadata.min.js" />
+    <Content Include="Scripts\jquery.ui.swappable.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Script\Common\jquery.cookie.js" />
+    <Content Include="Script\Createreport.js" />
+    <Content Include="Script\LiquidPenetrantTest.js" />
+    <Content Include="Script\LiquidPenetrantTestReportList.js" />
+    <Content Include="Script\LiquidPenetrantTestReportViewer.js" />
+    <Content Include="Script\MagneticParticleTest.js" />
+    <Content Include="Script\MagneticParticleTestReportList.js" />
+    <Content Include="Script\MagneticParticleTestReportViewer.js" />
+    <Content Include="Script\MasterPage.js" />
+    <Content Include="Script\RadiographicWeldReportViewer.js" />
+    <Content Include="Script\RadiographicWeldReport.js" />
+    <Content Include="Script\RadiographicWeldReportView.js" />
+    <Content Include="Script\GetRediographicWeldTemplateName.js" />
+    <Content Include="Script\ReportLayout.js" />
+    <Content Include="A1_Crap\XDummy1.aspx" />
+    <Content Include="Script\CommonFunction.js" />
+    <Content Include="Script\Common\jquery-1.8.2.min.js" />
+    <Content Include="Script\Common\jquery-ui-1.8.24.custom.min.js" />
+    <Content Include="Script\Json\cycle.js" />
+    <Content Include="Script\Json\json.js" />
+    <Content Include="Script\Json\json2.js" />
+    <Content Include="Script\Json\json_parse.js" />
+    <Content Include="Script\Json\json_parse_state.js" />
+    <Content Include="Script\SearchReport.js" />
+    <Content Include="Script\TemplateGenerator.js" />
+    <Content Include="Script\EditTemplateGenerator.js" />
+    <Content Include="Script\UltrasonicTest.js" />
+    <Content Include="Script\UltrasonicTestReportList.js" />
+    <Content Include="Script\UltrasonicTestReportViewer.js" />
+    <Content Include="SearchReport.aspx" />
+    <Content Include="Swappable.aspx" />
+    <Content Include="TemplateGenerator.aspx" />
+    <Content Include="TestAutoCompleteDocumentation.aspx" />
+    <Content Include="UltrasonicTestReport.aspx" />
+    <Content Include="UltrasonicTestReportList.aspx" />
+    <Content Include="UltrasonicTestReportViewer.aspx" />
+    <Content Include="ValGen.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="A1_Crap\PDFSample.aspx.cs">
+      <DependentUpon>PDFSample.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1_Crap\PDFSample.aspx.designer.cs">
+      <DependentUpon>PDFSample.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Common\ConfigManager.cs" />
+    <Compile Include="Common\PDFCreator.cs" />
+    <Compile Include="Domain\AutoComplete.cs" />
+    <Compile Include="Domain\BillSummaryRepository.cs" />
+    <Compile Include="Domain\CompanyDetails.cs" />
+    <Compile Include="Domain\DbRadiographicWelds.cs" />
+    <Compile Include="Domain\DbTemplateGenerator.cs" />
+    <Compile Include="Domain\DbUltrasonicTest.cs" />
+    <Compile Include="Domain\DbUltrasonicTestResults.cs" />
+    <Compile Include="Domain\MPTestResultDetail.cs" />
+    <Compile Include="Domain\ReportViewerHelperOperations.cs" />
+    <Compile Include="Domain\SearchTestRecordReq.cs" />
+    <Compile Include="Domain\SearchTestRecordResp.cs" />
+    <Compile Include="Domain\TestRecordLight.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\Autocomplete.ashx.cs">
+      <DependentUpon>Autocomplete.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="BusinessLayer\businessclass.cs" />
+    <Compile Include="BusinessLayer\mailclass.cs" />
+    <Compile Include="Common\ConversionHandler.cs" />
+    <Compile Include="Common\HandleError.cs" />
+    <Compile Include="Common\Connections.cs" />
+    <Compile Include="DataLayer\DALHelper.cs" />
+    <Compile Include="Home.aspx.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Home.aspx.designer.cs">
+      <DependentUpon>Home.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CreateReport.aspx.cs">
+      <DependentUpon>CreateReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CreateReport.aspx.designer.cs">
+      <DependentUpon>CreateReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DataLayer\dataclass.cs" />
+    <Compile Include="Domain\ExceptionLogger.cs" />
+    <Compile Include="Domain\GetTemplateName.cs" />
+    <Compile Include="Domain\LiquidPenetrantReportViewerHelper.cs" />
+    <Compile Include="Domain\LiquidPenetrantTest.cs" />
+    <Compile Include="Domain\LiquidPenetrantTestResults.cs" />
+    <Compile Include="Domain\LiquidPenetrantTestTemplate.cs" />
+    <Compile Include="Domain\MagneticParticleReportViewerHelper.cs" />
+    <Compile Include="Domain\MagneticParticleTest.cs" />
+    <Compile Include="Domain\MagneticParticleTestResults.cs" />
+    <Compile Include="Domain\MagneticParticleTestTemplate.cs" />
+    <Compile Include="Domain\ReportTemplate.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Domain\ReportViewerHelper.cs" />
+    <Compile Include="Domain\CustomTemplateGenerator.cs" />
+    <Compile Include="Domain\TemplateName.cs" />
+    <Compile Include="Domain\UltrasonicReportViewerHelper.cs" />
+    <Compile Include="Domain\UltrasonicTest.cs" />
+    <Compile Include="Domain\UltrasonicTestResults.cs" />
+    <Compile Include="Domain\UltrasonicTestTemplate.cs" />
+    <Compile Include="EditReport.aspx.cs">
+      <DependentUpon>EditReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditReport.aspx.designer.cs">
+      <DependentUpon>EditReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTemplate.aspx.cs">
+      <DependentUpon>EditTemplate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTemplate.aspx.designer.cs">
+      <DependentUpon>EditTemplate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTemplateGenerator.aspx.cs">
+      <DependentUpon>EditTemplateGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTemplateGenerator.aspx.designer.cs">
+      <DependentUpon>EditTemplateGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GetRediographicWeldTemplateName.aspx.cs">
+      <DependentUpon>GetRediographicWeldTemplateName.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GetRediographicWeldTemplateName.aspx.designer.cs">
+      <DependentUpon>GetRediographicWeldTemplateName.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\LiquidPenetrantTestHandler.ashx.cs">
+      <DependentUpon>LiquidPenetrantTestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\LiquidPenetrantTestReportViewerHandler.ashx.cs">
+      <DependentUpon>LiquidPenetrantTestReportViewerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\MagneticParticleTestHandler.ashx.cs">
+      <DependentUpon>MagneticParticleTestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\MagneticParticleTestReportViewerHandler.ashx.cs">
+      <DependentUpon>MagneticParticleTestReportViewerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\MasterPageHandler.ashx.cs">
+      <DependentUpon>MasterPageHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\ReportLayoutViewerHandler.ashx.cs">
+      <DependentUpon>ReportLayoutViewerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\TemplateEditHandler.ashx.cs">
+      <DependentUpon>TemplateEditHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\TemplateGenerator.ashx.cs">
+      <DependentUpon>TemplateGenerator.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\TemplateNameSearchReport.ashx.cs">
+      <DependentUpon>TemplateNameSearchReport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\UltrasonicTestHandler.ashx.cs">
+      <DependentUpon>UltrasonicTestHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\UltrasonicTestReportViewerHandler.ashx.cs">
+      <DependentUpon>UltrasonicTestReportViewerHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="LiquidPenetrantTestReport.aspx.cs">
+      <DependentUpon>LiquidPenetrantTestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LiquidPenetrantTestReport.aspx.designer.cs">
+      <DependentUpon>LiquidPenetrantTestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LiquidPenetrantTestReportList.aspx.cs">
+      <DependentUpon>LiquidPenetrantTestReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LiquidPenetrantTestReportList.aspx.designer.cs">
+      <DependentUpon>LiquidPenetrantTestReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LiquidPenetrantTestReportViewer.aspx.cs">
+      <DependentUpon>LiquidPenetrantTestReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LiquidPenetrantTestReportViewer.aspx.designer.cs">
+      <DependentUpon>LiquidPenetrantTestReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Admin\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Admin\SourceLookUpPage.aspx.cs">
+      <DependentUpon>SourceLookUpPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\SourceLookUpPage.aspx.designer.cs">
+      <DependentUpon>SourceLookUpPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Admin\RefDocLookUpPage.aspx.cs">
+      <DependentUpon>RefDocLookUpPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\RefDocLookUpPage.aspx.designer.cs">
+      <DependentUpon>RefDocLookUpPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Module\Admin\LookUpPage.aspx.cs">
+      <DependentUpon>LookUpPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module\Admin\LookUpPage.aspx.designer.cs">
+      <DependentUpon>LookUpPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MagneticParticleTestReport.aspx.cs">
+      <DependentUpon>MagneticParticleTestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MagneticParticleTestReport.aspx.designer.cs">
+      <DependentUpon>MagneticParticleTestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MagneticParticleTestReportList.aspx.cs">
+      <DependentUpon>MagneticParticleTestReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MagneticParticleTestReportList.aspx.designer.cs">
+      <DependentUpon>MagneticParticleTestReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MagneticParticleTestReportViewer.aspx.cs">
+      <DependentUpon>MagneticParticleTestReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MagneticParticleTestReportViewer.aspx.designer.cs">
+      <DependentUpon>MagneticParticleTestReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="MenuItems.aspx.cs">
+      <DependentUpon>MenuItems.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MenuItems.aspx.designer.cs">
+      <DependentUpon>MenuItems.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\FeedbackForm.aspx.cs">
+      <DependentUpon>FeedbackForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\FeedbackForm.aspx.designer.cs">
+      <DependentUpon>FeedbackForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ForgotPasswordForm.aspx.cs">
+      <DependentUpon>ForgotPasswordForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ForgotPasswordForm.aspx.designer.cs">
+      <DependentUpon>ForgotPasswordForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\LoginPage.aspx.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\LoginPage.aspx.designer.cs">
+      <DependentUpon>LoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\Registration.aspx.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\Registration.aspx.designer.cs">
+      <DependentUpon>Registration.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\ResetPasswordForm.aspx.cs">
+      <DependentUpon>ResetPasswordForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\ResetPasswordForm.aspx.designer.cs">
+      <DependentUpon>ResetPasswordForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PresentationLayer\WelcomeForm.aspx.cs">
+      <DependentUpon>WelcomeForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PresentationLayer\WelcomeForm.aspx.designer.cs">
+      <DependentUpon>WelcomeForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadiographicWeldReportView.aspx.cs">
+      <DependentUpon>RadiographicWeldReportView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadiographicWeldReportView.aspx.designer.cs">
+      <DependentUpon>RadiographicWeldReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RadiographicWeldReportViewer.aspx.cs">
+      <DependentUpon>RadiographicWeldReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadiographicWeldReportViewer.aspx.designer.cs">
+      <DependentUpon>RadiographicWeldReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\SearchReport.cs" />
+    <Compile Include="HTTPWebHandlers\SearchReport.ashx.cs">
+      <DependentUpon>SearchReport.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportLayout.aspx.cs">
+      <DependentUpon>ReportLayout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportLayout.aspx.designer.cs">
+      <DependentUpon>ReportLayout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\DbBase.cs" />
+    <Compile Include="Domain\JsonResponse.cs" />
+    <Compile Include="Domain\RadiographicWelds.cs" />
+    <Compile Include="Domain\RadiographicWeldsTemplate.cs" />
+    <Compile Include="Domain\RadiographicWeldsTestResults.cs" />
+    <Compile Include="A1_Crap\XDummy1.aspx.cs">
+      <DependentUpon>XDummy1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="A1_Crap\XDummy1.aspx.designer.cs">
+      <DependentUpon>XDummy1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Domain\ResponseHelper.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="HomeMaster.Master.cs">
+      <DependentUpon>HomeMaster.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="HomeMaster.Master.designer.cs">
+      <DependentUpon>HomeMaster.Master</DependentUpon>
+    </Compile>
+    <Compile Include="HTTPWebHandlers\ReportLayoutHandler.ashx.cs">
+      <DependentUpon>ReportLayoutHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="HTTPWebHandlers\RadiographicWeldList.ashx.cs">
+      <DependentUpon>RadiographicWeldList.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="RadiographicWeldReport.aspx.cs">
+      <DependentUpon>RadiographicWeldReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RadiographicWeldReport.aspx.designer.cs">
+      <DependentUpon>RadiographicWeldReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchReport.aspx.cs">
+      <DependentUpon>SearchReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchReport.aspx.designer.cs">
+      <DependentUpon>SearchReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Swappable.aspx.cs">
+      <DependentUpon>Swappable.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Swappable.aspx.designer.cs">
+      <DependentUpon>Swappable.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TemplateGenerator.aspx.cs">
+      <DependentUpon>TemplateGenerator.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TemplateGenerator.aspx.designer.cs">
+      <DependentUpon>TemplateGenerator.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TestAutoCompleteDocumentation.aspx.cs">
+      <DependentUpon>TestAutoCompleteDocumentation.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TestAutoCompleteDocumentation.aspx.designer.cs">
+      <DependentUpon>TestAutoCompleteDocumentation.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UltrasonicTestReport.aspx.cs">
+      <DependentUpon>UltrasonicTestReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UltrasonicTestReport.aspx.designer.cs">
+      <DependentUpon>UltrasonicTestReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UltrasonicTestReportList.aspx.cs">
+      <DependentUpon>UltrasonicTestReportList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UltrasonicTestReportList.aspx.designer.cs">
+      <DependentUpon>UltrasonicTestReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UltrasonicTestReportViewer.aspx.cs">
+      <DependentUpon>UltrasonicTestReportViewer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UltrasonicTestReportViewer.aspx.designer.cs">
+      <DependentUpon>UltrasonicTestReportViewer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ValGen.aspx.cs">
+      <DependentUpon>ValGen.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ValGen.aspx.designer.cs">
+      <DependentUpon>ValGen.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin\" />
+    <Folder Include="PDFs\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\RadiographicWeldList.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\ReportLayoutHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\SearchReport.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\ReportLayoutViewerHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\TemplateGenerator.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\TemplateNameSearchReport.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\TemplateEditHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\MagneticParticleTestHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\LiquidPenetrantTestHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\MagneticParticleTestReportViewerHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\LiquidPenetrantTestReportViewerHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\UltrasonicTestHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\UltrasonicTestReportViewerHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\Autocomplete.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HTTPWebHandlers\MasterPageHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Module\Admin\Admin.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <SaveServerSettingsInUserFile>True</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>call $(ProjectDir)\TestScripts\SqlUnitTestScriptRunner.bat $(ProjectDir)TestScripts\TestCases.sql</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+
+<Target Name="DeployApp">
+	<Message Text="Copying application files..." />
+	<ItemGroup>
+	<ApplicationFiles Include="$(ApplicationOutputDirectory)\**\*.*" />
+</ItemGroup>
+<Copy SourceFiles="@(ApplicationFiles)" DestinationFolder="$(DestinationPath)\%(RecursiveDir)"/>
+</Target>
+  -->
+</Project>

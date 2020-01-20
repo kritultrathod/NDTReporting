@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <script type="text/javascript">
+        function subst() {
+            var vars = {};
+            var x = document.location.search.substring(1).split('&');
+            for (var i in x) { var z = x[i].split('=', 2); vars[z[0]] = unescape(z[1]); }
+            var x = ['frompage', 'topage', 'page', 'webpage', 'section', 'subsection', 'subsubsection'];
+            for (var i in x) {
+                var y = document.getElementsByClassName(x[i]);
+                for (var j = 0; j < y.length; ++j) y[j].textContent = vars[x[i]];
+            }
+        }
+    </script>
+    <link href="CSS/style-web.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="border: 0; margin: 0;" onload="subst()">
+    <div id="SignaturesContainer" class="Section ui-sortable">
+        <div class="body">
+            <div class="SectionHeading">
+                Signatures:
+            </div>
+            <div id="Div1" class="ui-sortable">
+                <div id="Div2" class="border ui-sortable">
+                    <div class="DivCellsFourCols Header">
+                        Tested by ASNT UT Level II
+                    </div>
+                    <div class="DivCellsFourCols Header">
+                        Reviewed by ASNT UT Level II
+                    </div>
+                    <div class="DivCellsFourCols Header">
+                        Customer
+                    </div>
+                    <div class="DivCellsFourCols Header">
+                        Surveyor
+                    </div>
+                    <div class="DivCellsFourCols border sign">
+                    </div>
+                    <div class="DivCellsFourCols border sign">
+                    </div>
+                    <div class="DivCellsFourCols border sign">
+                    </div>
+                    <div class="DivCellsFourCols border sign">
+                    </div>
+                    <div class="clear">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <table style="border-bottom: 0px solid black; width: 100%">
+        <tr>
+            <td class="section">
+            </td>
+            <td style="text-align: right">
+                Page <span class="page"></span> of <span class="topage"></span>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

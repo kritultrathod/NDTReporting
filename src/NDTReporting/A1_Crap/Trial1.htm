@@ -1,0 +1,569 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>4 Column CSS Layout - parellel design</title>
+    <style type='text/css'>
+    .DivFieldLabel2 {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666; /*#666 black*/;
+	border-color: #CCCCCC;
+/*#CCCCCC black*/border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	float: left;
+	display: block;
+	overflow: hidden;
+	/*padding: 10px 5px 10px 5px;*/
+	border-color: #CCCCCC;
+/*#CCCCCC black*/border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	font-weight: bold;
+	width: 100%;
+	text-align: right;
+	background-color: #EEEEEE;
+	white-space: pre-wrap;      /* CSS3 */   
+   white-space: -moz-pre-wrap; /* Firefox */    
+   white-space: -pre-wrap;     /* Opera <7 */   
+   white-space: -o-pre-wrap;   /* Opera 7 */    
+   word-wrap: break-word;      /* IE */
+	
+}
+.DivFieldValue2 {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #666; /*#666 black*/;
+	border-color: #CCCCCC;
+/*#CCCCCC black*/border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	float: left;
+	display: block;
+	overflow: hidden;
+	/*padding: 10px 5px 10px 5px;*/
+	border-color: #CCCCCC;
+/*#CCCCCC black*/border-width: 1px;
+	border-style: solid;
+	border-collapse: collapse;
+	width: 100%;
+	text-align: left;
+	background-color: #FFFFFf;
+	
+}
+.header{
+   position: relative;
+   float: left;
+   left: 0px;
+   width: 100%;
+   text-align: center;
+   background-color: #f4f4f4
+}
+.wrapper{
+   position: relative;
+   float: left;
+   left: 0px;
+   width: 100%;
+   
+}
+.left1{
+   position: relative;
+   float: left;
+   left: 0px;
+   width: 15%;
+   
+        top: 0px;
+    }
+.left2{
+   position: relative;
+   float: left;
+   left: 0px;
+   width: 35%;
+   
+    }
+.left3{
+   position: relative;
+   float: left;
+   left: 0px;
+   width: 15%;
+   
+    }
+.right{
+   position: relative;
+   float: right;
+   right: 0px;
+   width: 35%;
+   
+    }
+.footer{
+   position: relative;
+   float: left;
+   left: 0px;
+   width: 100%;
+   background-color: #cfcfcf
+}
+body {
+   border-width: 0px;
+   padding: 0px;
+   margin: 0px;
+   font-size: 90%;
+   background-color: #e7e7de
+}
+    
+</style>
+</head>
+<body>
+    <div class="Banner">
+    </div>
+    <div class="Sections ui-sortable">
+        <div id="JobDescriptionContainer" class="Section">
+            <div class="SectionHeading">
+                Job Description
+            </div>
+            <div id="JobDescription" class="border">
+                <div class="DivColumns left ui-sortable">
+                    <div id="reportno" class="DivCells">
+                        <div class="DivFieldLabel2">
+                            Report Nohgsdvfhjfsajkfjaskfjkasfkasjf:
+                        </div>
+                        <div class="DivFieldValue2">
+                            ##reportnoValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="Location" class="DivCells">
+                        <div class="DivFieldLabel2">
+                            Location:
+                        </div>
+                        <div class="DivFieldValue2">
+                            ##LocationValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="Client" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Client:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##ClientValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="contactno" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Contact No:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##contactnoValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                </div>
+                <div class="DivColumns right ui-sortable">
+                    <div id="testdate" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Test Date:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##testdateValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="contactperson" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Contact Person:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##contactpersonValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="ReferenceDocumentsContainer" class="Section">
+            <div class="SectionHeading">
+                Reference Documents
+            </div>
+            <div id="ReferenceDocuments" class="border">
+                <div class="DivColumns left ui-sortable">
+                    <div id="code" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Code:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##CodeValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="TestSpecification" class="DivCells">
+                        <div class="DivFieldLabel">
+                            TestSpecification:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##TestSpecificationValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                </div>
+                <div class="DivColumns right ui-sortable">
+                    <div id="TestProcedureNo" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Test Procedure No.:</div>
+                        <div class="DivFieldValue">
+                            ##TestProcedureValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="AcceptanceStandard" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Acceptance Standard:</div>
+                        <div class="DivFieldValue">
+                            ##AcceptanceStandardValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="RadiographyTechniqueDetailsContainer" class="Section">
+            <div class="SectionHeading">
+                Radiography Technique Details
+            </div>
+            <div id="RadiographyTechniqueDetail" class="border">
+                <div class="DivColumns left ui-sortable">
+                    <div id="TypeofSource" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Type of Source:</div>
+                        <div class="DivFieldValue">
+                            ##TypeofSourceValue##</div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="UnitofEnergy" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Unit of Energy:</div>
+                        <div class="DivFieldValue">
+                            ##UnitofEnergyValue##</div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="Identification" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Identification:</div>
+                        <div class="DivFieldValue">
+                            ##IdentificationValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="FocalSpotSize" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Focal Spot Size:</div>
+                        <div class="DivFieldValue">
+                            ##FocalSpotSizeValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="FilmMakeAndType" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Film Make And Type:</div>
+                        <div class="DivFieldValue">
+                            ##FilmMakeAndTypeValue##</div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="TypeofIQI" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Type of IQI:</div>
+                        <div class="DivFieldValue">
+                            ##TypeofIQIValue##</div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="IQIBatchNo" class="DivCells">
+                        <div class="DivFieldLabel">
+                            IQI BatchNo:</div>
+                        <div class="DivFieldValue">
+                            ##IQIBatchNoValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                </div>
+                <div class="DivColumns right ui-sortable">
+                    <div id="TechniqueName" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Technique:</div>
+                        <div class="DivFieldValue">
+                            ##TechniqueNameValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="ShimThickness" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Shim Thickness:</div>
+                        <div class="DivFieldValue">
+                            ##ShimThicknessValue##</div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="DensitometerNo" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Densitometer No:</div>
+                        <div class="DivFieldValue">
+                            ##DensitometerNoValue##</div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="CalibrationDate" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Calibration Date:</div>
+                        <div class="DivFieldValue">
+                            ##CalibrationDateValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="GeometricalUnsharpness" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Geometrical Unsharpness:</div>
+                        <div class="DivFieldValue">
+                            ##GeometricalUnsharpnessValue##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="ExposureTime" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Exposure Time:</div>
+                        <div class="DivFieldValue">
+                            ##ExposureTime##
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                    <div id="Div14" class="DivCells">
+                        <div class="DivFieldLabel">
+                            &amp;nbsp;</div>
+                        <div class="DivFieldValue">
+                            &amp;nbsp;
+                        </div>
+                        <div class="delete-tab">
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="JobDetailsContainer" class="Section">
+            <div class="SectionHeading">
+                Test Results
+            </div>
+            <div id="JobDetails" class="border">
+                <div style="width: 5%" class="TableHeader">
+                    No
+                </div>
+                <div style="width: 13%" class="TableHeader">
+                    Identification No
+                </div>
+                <div style="width: 10%" class="TableHeader">
+                    Joint No
+                </div>
+                <div style="width: 10%" class="TableHeader">
+                    Welder
+                </div>
+                <div style="width: 10%" class="TableHeader">
+                    Segment
+                </div>
+                <div style="width: 7%" class="TableHeader">
+                    Size
+                </div>
+                <div style="width: 10%" class="TableHeader">
+                    Density
+                </div>
+                <div style="width: 10%" class="TableHeader">
+                    Sensitivity
+                </div>
+                <div style="width: 10%" class="TableHeader">
+                    Observation
+                </div>
+                <div style="width: 15%" class="TableHeader">
+                    Remarks
+                </div>
+                <div id="JobDetailsTableRowTemplateContainer">
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="LegendContainer" class="Section">
+            <div class="SectionHeading">
+                Legend
+            </div>
+            <div id="Legend" class="border">
+                <div id="Div1" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        IP/LP
+                    </div>
+                    <div class="DivFieldValue">
+                        Incomplete Penetration
+                    </div>
+                </div>
+                <div id="Div2" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        LF
+                    </div>
+                    <div class="DivFieldValue">
+                        Lack of Fusion
+                    </div>
+                </div>
+                <div id="Div3" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        SL
+                    </div>
+                    <div class="DivFieldValue">
+                        Slag Line
+                    </div>
+                </div>
+                <div id="Div4" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        UC
+                    </div>
+                    <div class="DivFieldValue">
+                        Under Cut
+                    </div>
+                </div>
+                <div id="Div5" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        AD
+                    </div>
+                    <div class="DivFieldValue">
+                        Accumulated Defects
+                    </div>
+                </div>
+                <div id="Div6" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        Por
+                    </div>
+                    <div class="DivFieldValue">
+                        Porosity
+                    </div>
+                </div>
+                <div id="Div7" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        Gr Por
+                    </div>
+                    <div class="DivFieldValue">
+                        Group Porosity
+                    </div>
+                </div>
+                <div id="Div8" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        BT
+                    </div>
+                    <div class="DivFieldValue">
+                        Burn Thru
+                    </div>
+                </div>
+                <div id="Div9" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        RT
+                    </div>
+                    <div class="DivFieldValue">
+                        Retake
+                    </div>
+                </div>
+                <div id="Div10" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        RS
+                    </div>
+                    <div class="DivFieldValue">
+                        Reshoot
+                    </div>
+                </div>
+                <div id="Div11" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        Rep
+                    </div>
+                    <div class="DivFieldValue">
+                        Repair
+                    </div>
+                </div>
+                <div id="Div12" class="DivCellsFourCols">
+                    <div class="DivFieldLabel">
+                        Acc
+                    </div>
+                    <div class="DivFieldValue">
+                        Acceptable
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+        <div id="SignaturesContainer" class="Section">
+            <div class="SectionHeading">
+                Radiographer:
+            </div>
+            <div id="Signatures" class="border">
+                <div class="DivCellsFourCols Header">
+                    Radiographs Viewed By
+                </div>
+                <div class="DivCellsFourCols Header">
+                    Client Approval
+                </div>
+                <div class="DivCellsFourCols Header">
+                    Authority Witness
+                </div>
+                <div class="DivCellsFourCols Header">
+                    Client Witness
+                </div>
+                <div class="DivCellsFourCols border">
+                    &amp;nbsp;<br>
+                    <br>
+                    <br>
+                </div>
+                <div class="DivCellsFourCols border">
+                    &amp;nbsp;<br>
+                    <br>
+                    <br>
+                </div>
+                <div class="DivCellsFourCols border">
+                    &amp;nbsp;<br>
+                    <br>
+                    <br>
+                </div>
+                <div class="DivCellsFourCols border">
+                    &amp;nbsp;<br>
+                    <br>
+                    <br>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

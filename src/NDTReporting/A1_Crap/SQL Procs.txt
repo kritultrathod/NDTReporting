@@ -1,0 +1,44 @@
+﻿Session["AppId"]
+Session["ClientId"]
+Session["CurrentPageId"]
+Session["Date"]
+Session["IsAdmin"]
+Session["LID"]
+Session["LookupCode"]
+Session["SubTestTypeID"]
+Session["TestType"]
+Session["UserName"]
+Session["emailid"]
+Session["id"]
+Session["userid"]
+
+/**************************************************************************************************************/
+
+CREATE PROCEDURE [NDT_POC].[prc_getReportById]        
+
+ @TestID AS INT ,        
+ @ReportId AS INT ,    
+ @TemplateId AS INT         
+AS          
+BEGIN         
+ --SELECT * FROM ReportTemplates A WHERE A.Id = @ID        
+ SELECT * FROM ReportTemplates A WHERE A.TestID = @TestID  AND A.TemplateId = @TemplateId      
+ ORDER BY A.SectionsID        
+ --modified by ritesh    
+ SELECT A.*,    
+ B.Code,B.TestSpecification,B.TestProcedureNo,B.AcceptanceStandard,    
+ C.TypeofSource,C.UnitofEnergy,C.Identification,C.FocalSpotSize,    
+ D.TechniqueName     
+ FROM dbo.RadiographicWeld A, RefDocuments B, RadiationSource C, Techniques D        
+ WHERE A.RefDocumentId=B.RefDocumentId      
+ and A.RadiationSourceId = C.RadiationSourceId     
+ and A.TechniqueId=D.TechniqueId    
+ and A.ReportId = @ReportId    
+     
+ --modified by ritesh    
+ SELECT ROW_NUMBER() OVER(ORDER BY TestId DESC) AS SrNo,A.*,B.Observations,C.Remarks 
+ FROM dbo.RadiographicWeldTestResult A, dbo.Observations B, dbo.Remarks C     
+ WHERE A.ObservationsId = B.ObservationsId and     
+ A.RemarksId = C.RemarksId and     
+ A.ReportId = @ReportId        
+END 

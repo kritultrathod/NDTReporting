@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite]">
+  <test name="signup(failed)">
+    <classes>
+      <class name="testCaseForNdt.TC_edit_radiographicweldreport">
+        <methods>
+          <include name="setUp"/>
+          <include name="setUpone"/>
+          <include name="test_editradiographicweldreport"/>
+        </methods>
+      </class> <!-- testCaseForNdt.TC_edit_radiographicweldreport -->
+      <class name="testCaseForNdt.TC_createtemplate">
+        <methods>
+          <include name="test_radiographicweldreport"/>
+          <include name="setUpone"/>
+          <include name="tearDownone"/>
+        </methods>
+      </class> <!-- testCaseForNdt.TC_createtemplate -->
+      <class name="testCaseForNdt.TC_signup">
+        <methods>
+          <include name="setupone"/>
+        </methods>
+      </class> <!-- testCaseForNdt.TC_signup -->
+      <class name="testCaseForNdt.TC_radiographicweldreport">
+        <methods>
+          <include name="tearDownone"/>
+          <include name="setUpone"/>
+        </methods>
+      </class> <!-- testCaseForNdt.TC_radiographicweldreport -->
+    </classes>
+  </test> <!-- signup(failed) -->
+</suite> <!-- Failed suite [Suite] -->

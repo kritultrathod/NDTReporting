@@ -1,0 +1,412 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile>2014-01-25T13:58:09.6250000+05:30</TimeStampOfAssociatedLegacyPublishXmlFile>
+    <_PublishTargetUrl>E:\NDTReports-Release\ToUpload</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="A1_Crap/divtest.htm">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="A1_Crap/HTMLPage1.htm">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="A1_Crap/index.htm">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="A1_Crap/PDFSample.aspx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="A1_Crap/SQL Procs.txt">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="A1_Crap/Swapable.htm">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="A1_Crap/Trial1.htm">
+      <publishTime>01/04/2014 12:56:38</publishTime>
+    </File>
+    <File Include="A1_Crap/XDummy1.aspx">
+      <publishTime>01/04/2014 12:56:35</publishTime>
+    </File>
+    <File Include="bin/NDTReporting.dll">
+      <publishTime>03/01/2014 18:02:09</publishTime>
+    </File>
+    <File Include="CreateReport.aspx">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="CSS/Admin.css">
+      <publishTime>11/16/2013 02:57:21</publishTime>
+    </File>
+    <File Include="CSS/menustyle.css">
+      <publishTime>12/29/2013 00:25:03</publishTime>
+    </File>
+    <File Include="CSS/style-print.css">
+      <publishTime>12/29/2013 00:25:03</publishTime>
+    </File>
+    <File Include="CSS/style-web.css">
+      <publishTime>01/03/2014 21:07:42</publishTime>
+    </File>
+    <File Include="CSS/Styles.css">
+      <publishTime>12/29/2013 00:25:03</publishTime>
+    </File>
+    <File Include="EditReport.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="EditTemplate.aspx">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="EditTemplateGenerator.aspx">
+      <publishTime>11/30/2013 18:41:21</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>11/16/2013 02:57:16</publishTime>
+    </File>
+    <File Include="GetRediographicWeldTemplateName.aspx">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Home.aspx">
+      <publishTime>11/16/2013 02:57:17</publishTime>
+    </File>
+    <File Include="HomeMaster.Master">
+      <publishTime>11/28/2013 19:11:26</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/Autocomplete.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/LiquidPenetrantTestHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/LiquidPenetrantTestReportViewerHandler.ashx">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/MagneticParticleTestHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/MagneticParticleTestReportViewerHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/MasterPageHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/RadiographicWeldList.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/ReportLayoutHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/ReportLayoutViewerHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/SearchReport.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/TemplateEditHandler.ashx">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/TemplateGenerator.ashx">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/TemplateNameSearchReport.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/UltrasonicTestHandler.ashx">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="HTTPWebHandlers/UltrasonicTestReportViewerHandler.ashx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="Images/cancel.gif">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/form_bg.jpg">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/gradient.png">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/loader.gif">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/logo.gif">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/minus.png">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/NDT_512Silver.jpg">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/plus.png">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/remove.jpg">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/SampleCompanyLogo.PNG">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/scaanray.jpg">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Images/submit.gif">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="lib/libeay32.dll">
+      <publishTime>11/16/2013 02:57:17</publishTime>
+    </File>
+    <File Include="lib/libgcc_s_dw2-1.dll">
+      <publishTime>11/16/2013 02:57:17</publishTime>
+    </File>
+    <File Include="lib/ssleay32.dll">
+      <publishTime>11/16/2013 02:57:17</publishTime>
+    </File>
+    <File Include="lib/wkhtmltopdf.exe">
+      <publishTime>11/16/2013 02:57:17</publishTime>
+    </File>
+    <File Include="LiquidPenetrantTestReport.aspx">
+      <publishTime>01/11/2014 21:58:02</publishTime>
+    </File>
+    <File Include="LiquidPenetrantTestReportList.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="LiquidPenetrantTestReportViewer.aspx">
+      <publishTime>11/30/2013 18:41:21</publishTime>
+    </File>
+    <File Include="MagneticParticleTestReport.aspx">
+      <publishTime>01/11/2014 21:58:02</publishTime>
+    </File>
+    <File Include="MagneticParticleTestReportList.aspx">
+      <publishTime>11/16/2013 02:57:24</publishTime>
+    </File>
+    <File Include="MagneticParticleTestReportViewer.aspx">
+      <publishTime>12/26/2013 01:48:40</publishTime>
+    </File>
+    <File Include="MenuItems.aspx">
+      <publishTime>11/16/2013 02:57:24</publishTime>
+    </File>
+    <File Include="Module/Admin/Admin.Master">
+      <publishTime>12/25/2013 19:10:13</publishTime>
+    </File>
+    <File Include="Module/Admin/LookUpPage.aspx">
+      <publishTime>12/18/2013 12:51:50</publishTime>
+    </File>
+    <File Include="Module/Admin/RefDocLookUpPage.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="Module/Admin/SourceLookUpPage.aspx">
+      <publishTime>12/31/2013 22:18:03</publishTime>
+    </File>
+    <File Include="PDF/CSS/menustyle.css">
+      <publishTime>01/04/2014 12:56:05</publishTime>
+    </File>
+    <File Include="PDF/CSS/style-print.css">
+      <publishTime>01/04/2014 12:56:05</publishTime>
+    </File>
+    <File Include="PDF/CSS/style-web.css">
+      <publishTime>01/03/2014 23:24:02</publishTime>
+    </File>
+    <File Include="PDF/CSS/Styles.css">
+      <publishTime>01/04/2014 12:56:05</publishTime>
+    </File>
+    <File Include="PDF/footerLiquid.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/footerMagnetic.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/footerRadiography.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/footerUltrasonic.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/headerLiquid.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/headerMagnetic.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/headerRadiography.html">
+      <publishTime>01/18/2014 00:21:18</publishTime>
+    </File>
+    <File Include="PDF/headerUltrasonic.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PDF/ReportScaanrayMetallurgicalServices.html">
+      <publishTime>11/16/2013 02:57:18</publishTime>
+    </File>
+    <File Include="PresentationLayer/FeedbackForm.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="PresentationLayer/ForgotPasswordForm.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="PresentationLayer/LoginPage.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="PresentationLayer/Registration.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="PresentationLayer/ResetPasswordForm.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="PresentationLayer/WelcomeForm.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="RadiographicWeldReport.aspx">
+      <publishTime>01/25/2014 13:55:38</publishTime>
+    </File>
+    <File Include="RadiographicWeldReportView.aspx">
+      <publishTime>01/25/2014 13:55:38</publishTime>
+    </File>
+    <File Include="RadiographicWeldReportViewer.aspx">
+      <publishTime>11/30/2013 18:41:21</publishTime>
+    </File>
+    <File Include="ReportLayout.aspx">
+      <publishTime>11/16/2013 02:57:21</publishTime>
+    </File>
+    <File Include="Script/Common/jquery-1.8.2.min.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/Common/jquery-ui-1.8.24.custom.min.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/Common/jquery.cookie.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/CommonFunction.js">
+      <publishTime>01/25/2014 13:55:38</publishTime>
+    </File>
+    <File Include="Script/Createreport.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/EditTemplateGenerator.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/GetRediographicWeldTemplateName.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/Json/cycle.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/Json/json.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/Json/json2.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/Json/json_parse.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/Json/json_parse_state.js">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Script/LiquidPenetrantTest.js">
+      <publishTime>01/11/2014 21:58:02</publishTime>
+    </File>
+    <File Include="Script/LiquidPenetrantTestReportList.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/LiquidPenetrantTestReportViewer.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/MagneticParticleTest.js">
+      <publishTime>01/11/2014 21:58:02</publishTime>
+    </File>
+    <File Include="Script/MagneticParticleTestReportList.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/MagneticParticleTestReportViewer.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/MasterPage.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/RadiographicWeldReport.js">
+      <publishTime>01/10/2014 19:54:15</publishTime>
+    </File>
+    <File Include="Script/RadiographicWeldReportView.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/RadiographicWeldReportViewer.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/ReportLayout.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/SearchReport.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/TemplateGenerator.js">
+      <publishTime>01/27/2014 00:33:42</publishTime>
+    </File>
+    <File Include="Script/UltrasonicTest.js">
+      <publishTime>01/11/2014 21:58:02</publishTime>
+    </File>
+    <File Include="Script/UltrasonicTestReportList.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Script/UltrasonicTestReportViewer.js">
+      <publishTime>12/29/2013 00:24:59</publishTime>
+    </File>
+    <File Include="Scripts/addrecord-script.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1-vsdoc.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.4.1.min.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.inlinefieldlabel.min.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.metadata.min.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.ui.swappable.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>11/16/2013 02:57:19</publishTime>
+    </File>
+    <File Include="SearchReport.aspx">
+      <publishTime>11/16/2013 02:57:23</publishTime>
+    </File>
+    <File Include="Swappable.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="TemplateGenerator.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="TestAutoCompleteDocumentation.aspx">
+      <publishTime>11/16/2013 02:57:20</publishTime>
+    </File>
+    <File Include="UltrasonicTestReport.aspx">
+      <publishTime>01/11/2014 21:58:02</publishTime>
+    </File>
+    <File Include="UltrasonicTestReportList.aspx">
+      <publishTime>11/16/2013 02:57:22</publishTime>
+    </File>
+    <File Include="UltrasonicTestReportViewer.aspx">
+      <publishTime>11/30/2013 18:41:21</publishTime>
+    </File>
+    <File Include="ValGen.aspx">
+      <publishTime>11/30/2013 18:41:21</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>03/01/2014 18:02:14</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

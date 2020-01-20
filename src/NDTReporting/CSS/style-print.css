@@ -1,0 +1,33 @@
+﻿*
+{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size: 9px;
+    color: #666;
+    white-space: pre;
+}
+.container
+{
+    /*width: 100%;*/
+    width: 750px;
+    margin: 0;
+}
+.MasterBanner
+{
+    display: none;
+}
+/*NEW THING*/
+.border
+{
+    /*border-color: #CCCCCC; #CCCCCC black*/
+    border-width: 1px;
+    border-style: solid;
+    border-collapse: collapse;
+}

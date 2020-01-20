@@ -1,0 +1,91 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="NDTReporting.Module.Admin.Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="x-ua-compatible" content="IE=8">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <%--    <title></title>
+	<asp:ContentPlaceHolder ID="head" runat="server">
+	</asp:ContentPlaceHolder>--%>
+    <title></title>
+    <link href="../../Css/style-web.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/menustyle.css" rel="stylesheet" type="text/css" />
+    <link href="../../Css/Admin.css" rel="stylesheet" type="text/css" />
+    <link href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="HeaderContentPlaceHolder" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="AppsFonts body">
+    <form id="MasterPageForm1" runat="server">
+    <div id='ContainerCenterPage'>
+        <div id='CenterPage'>
+            <div class="MasterBanner">
+                <%-- New Menu From Here --%>
+                <%--<asp:HiddenField runat="server" ID="hfCurrTab" />--%>
+                <table id="nav" style="width: 100%">
+                    <tr>
+                        <td>
+                            <asp:Button runat="server" ID="STT1" Text="Radiographic Weld" CssClass="navTestTypeBtn" OnClick="btnSubTestType_Click" ClientIDMode="Static" />
+                        </td>
+                        <td>
+                            <asp:Button runat="server" ID="STT3" Text="Ultrasonic Test" CssClass="navTestTypeBtn" OnClick="btnSubTestType_Click" ClientIDMode="Static" />
+                        </td>
+                        <td>
+                            <asp:Button runat="server" ID="STT5" Text="Magnetic Particle" CssClass="navTestTypeBtn" OnClick="btnSubTestType_Click" ClientIDMode="Static" />
+                        </td>
+                        <td>
+                            <asp:Button runat="server" ID="STT7" Text="Liquid Penetrant" CssClass="navTestTypeBtn" OnClick="btnSubTestType_Click" ClientIDMode="Static" />
+                        </td>
+                        <td style="width: 50%">
+                            &nbsp;
+                        </td>
+                        <td>
+                            <asp:Button ID="Home" runat="server" OnClick="HomeButton_Click" Text="Home" class="classname" ClientIDMode="Static" />
+                        </td>
+                    </tr>
+                </table>
+                <table style="width: 100%">
+                    <tr>
+                        <td>
+                            <div class="dvTestType">
+                                <asp:Label runat="server" ID="txtTestType"></asp:Label>&nbsp;
+                            </div>
+                        </td>
+                        <td>
+                            <div class="dvUserGreeting">
+                                <asp:Label runat="server" ID="txtUserGreeting"></asp:Label>&nbsp;
+                            </div>
+                        </td>
+                        <td class="Logout">
+                            <%--<a href="#" class="Logout" >Log Out</a>--%>
+                            <asp:LinkButton runat="server" ID="btnLogOut" Text="Log Out" OnClick="btnLogOut_Click"></asp:LinkButton>
+                        </td>
+                    </tr>
+                </table>
+                <%-- New Menu END Here --%>
+            </div>
+            <hr size="1" width="100%" align="center" color="#0078ff" />
+            <div id="sub-title">
+                <div id="sub-left">
+                    <asp:Button runat="server" ID="Technique" Text="Technique" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <asp:Button runat="server" ID="ConsumablesType" Text="ConsumablesType" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <asp:Button runat="server" ID="FilmMakeAndType" Text="FilmMakeAndType" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <asp:Button runat="server" ID="Observations" Text="Observations" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <asp:Button runat="server" ID="Remarks" Text="Results" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <asp:Button runat="server" ID="RateType" Text="RateType" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <hr />
+                    <asp:Button runat="server" ID="RadiationSource" Text="RadiationSource" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                    <asp:Button runat="server" ID="RefDocuments" Text="RefDocuments" CssClass="lookup-code" OnClick="btnLookupCode_Click" ClientIDMode="Static" />
+                </div>
+                <div id="sub-right">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </div>
+                <div class="clear-both">
+                </div>
+            </div>
+        </div>
+    </div>
+    </form>
+</body>
+</html>

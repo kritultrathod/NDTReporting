@@ -1,0 +1,186 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="CSS/style-web.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript">
+        function getQueryStrings() {
+            var assoc = {};
+            var decode = function (s) { return decodeURIComponent(s.replace(/\+/g, " ")); };
+            var queryString = location.search.substring(1);
+            var keyValues = queryString.split('&');
+
+            for (var i in keyValues) {
+                var key = keyValues[i].split('=');
+                if (key.length > 1) {
+                    assoc[decode(key[0])] = decode(key[1]);
+                }
+            }
+
+            return assoc;
+        }
+        function subst() {
+            debugger;
+            var qs = getQueryStrings();
+            document.body.innerHTML = document.body.innerHTML.replace('##ReportId##', qs["id"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##LocationValue##', qs["location"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##CustomersNameValue##', qs["client"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##ContractNoValue##', qs["contractno"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##ReportNoValue##', qs["reportno"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##descriptionValue##', qs["description"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##DateOfTestingValue##', qs["testdate"]);
+            document.body.innerHTML = document.body.innerHTML.replace('##ContactPersonValue##', qs["contactperson"]);
+            //           document.body.innerHTML = document.body.innerHTML.replace('##addressValue##', qs["companyname"]);
+
+            var vars = {};
+            var x = document.location.search.substring(1).split('&');
+            for (var i in x) { var z = x[i].split('=', 2); vars[z[0]] = unescape(z[1]); }
+            var x = ['frompage', 'topage', 'page', 'webpage', 'section', 'subsection', 'subsubsection'];
+            for (var i in x) {
+                var y = document.getElementsByClassName(x[i]);
+                for (var j = 0; j < y.length; ++j) y[j].textContent = vars[x[i]];
+
+                if (vars['page'] == 1) { // If page is 1, set FakeHeaders display to none
+                    //document.getElementById("JobDescriptionContainer1").style.display = 'none';
+                    document.getElementById("JobDetailsHeader1").style.display = 'none';
+                }
+            }
+        }
+    </script>
+</head>
+<body onload="subst()">
+ <div class="Banner">
+        <table style="width: 100%;">
+            <tr>
+                <td style="width: 80%;" align="center">
+                    <span class="HeaderLarge">NDT REPORTING SERVICES PVT. LTD.</span><br />
+                    <span class="HeaderSmall">A 1/ ADDRESS LINE 1, LANDMARK, AREA, 
+                    </span>
+                    <br />
+                    <span class="HeaderSmall">CITY - PIN CODE. STATE, COUNTRY</span>
+                    <br />
+                    <span class="HeaderSmall">Tel: +91-22-12345678 / +91-22-87654321&nbsp; Fax: +91-22-23456789.
+                    </span>
+                    <br />
+                    <span class="HeaderSmall">Email:ServiceDesk@NDTReports.net</span>
+                </td>
+                <td style="width: 20%;" align="center">
+                    <img src="../Images/logo.gif" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: center; padding-bottom: 5px; padding-left: 5px; padding-right: 5px;
+                    font-size: medium; font-weight: bold; padding-top: 5px" colspan="2">
+                    MAGNETIC PARTICLE TEST REPORT
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div class="Section" id="JobDescriptionContainer1">
+        <div class="body">
+            <div class="SectionHeading">
+                Job Description
+            </div>
+            <div id="CustomerDetails" class="border">
+                <div class="DivColumns left">
+                    <div id="UniqueNo" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Unique No:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##ReportId##
+                        </div>
+                    </div>
+                    <div id="CustomersName" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Customers Name (address):
+                        </div>
+                        <div class="DivFieldValue">
+                            ##CustomersNameValue##
+                        </div>
+                    </div>
+                    <div id="reportno" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Customers Name (address):
+                        </div>
+                        <div class="DivFieldValue">
+                            ##CustomersNameValue##
+                        </div>
+                    </div>
+                    <div id="Location" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Location of work site:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##LocationValue##
+                        </div>
+                    </div>
+                </div>
+                <div class="DivColumns right">
+                    <div id="description" class="DivCells">
+                        <div class="DivFieldLabel">
+                            MT Report No:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##ReportNoValue##
+                        </div>
+                    </div>
+                    <div id="Client" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Contract No:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##ContractNoValue##
+                        </div>
+                    </div>
+                    <div id="testdate" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Contact Person:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##ContactPersonValue##
+                        </div>
+                    </div>
+                    <div id="contactperson1" class="DivCells">
+                        <div class="DivFieldLabel">
+                            Date of Testing:
+                        </div>
+                        <div class="DivFieldValue">
+                            ##DateOfTestingValue##
+                        </div>
+                    </div>
+                </div>
+                <div class="clear">
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <table style="width: 100%" class="border">
+                        <thead id="JobDetailsHeader1">
+                            <tr>
+                                <th style="width: 10%" class="TableHeader">
+                                    Sr No.
+                                </th>
+                                <th style="width: 15%" class="TableHeader">
+                                    Job Description
+                                </th>
+                                <th style="width: 15%" class="TableHeader">
+                                    Section / Seam
+                                </th>
+                                <th style="width: 15%" class="TableHeader">
+                                    Dimension
+                                </th>
+                                <th style="width: 15%" class="TableHeader">
+                                    Observations
+                                </th>
+                                <th style="width: 15%" class="TableHeader">
+                                    Result
+                                </th>
+                                <th style="width: 15%" class="TableHeader">
+                                    Sketch Reference
+                                </th>
+                            </tr>
+                        </thead>
+                        </table>
+</body>
+</html>
